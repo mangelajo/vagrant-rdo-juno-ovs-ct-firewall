@@ -9,9 +9,9 @@ Vagrant.configure('2') do |config|
   config.vm.provision :shell, :inline=> <<-EOF
         set -e
         set -x
-        # install epel and juno binary stuff to be available to our devstack
+        # configure our patched RDO packages and a RDO mirror for juno
         curl http://fileshare.ajo.es/rdo-juno-neutron-ovsct/rdo_juno_ovsct.repo >/etc/yum.repos.d/centos-rdo.repo
-        #sudo yum install -y https://rdo.fedorapeople.org/rdo-release.rpm
+        # sudo yum install -y https://rdo.fedorapeople.org/rdo-release.rpm
         sudo yum install -y deltarpm epel-release
         sudo yum update -y
         sudo yum install openstack-packstack -y
