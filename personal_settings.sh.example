@@ -1,0 +1,15 @@
+#!/bin/sh
+cd ~
+
+sudo yum install -y vim vim-enhanced ctags unzip git
+
+# go vim go!,
+git clone https://github.com/mangelajo/vim-settings
+cd vim-settings
+./install.sh
+cd ..
+
+
+
+
+
